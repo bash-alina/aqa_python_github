@@ -22,17 +22,18 @@ poor poverty, stricken boy in the .... morning, Tom was literally
 rolling in wealth."""
 
 ##  ПЕРЕЗАПИСУЙТЕ зміст змінної adwentures_of_tom_sawer у завданнях 1-3
-# task 01 ==
+print ("TASKS 01, 02, 03")
+# task 01 == # DONE
 """ Дані у строці adwentures_of_tom_sawer розбиті випадковим чином, через помилку.
 треба замінити кінець абзацу на пробіл .replace("\n", " ")"""
 adwentures_of_tom_sawer = adwentures_of_tom_sawer.replace("\n", " ")
 
-# task 02 ==
+# task 02 == # DONE
 """ Замініть .... на пробіл
 """
 adwentures_of_tom_sawer = adwentures_of_tom_sawer.replace("....", " ")
 
-# task 03 ==
+# task 03 == # DONE
 """ Зробіть так, щоб у тексті було не більше одного пробілу між словами.
 """
 adwentures_of_tom_sawer = adwentures_of_tom_sawer.replace("   ", " ")
@@ -40,9 +41,11 @@ adwentures_of_tom_sawer = adwentures_of_tom_sawer.replace("   ", " ")
 print(adwentures_of_tom_sawer)
 
 # ----------------------------------------------------------------------------------------
-# task 04
+# task 04 # DONE
 """ Виведіть, скількі разів у тексті зустрічається літера "h"
 """
+print ("TASK 04")
+
 count_1 = adwentures_of_tom_sawer.count("h")
 print(count_1)
 count_2 = adwentures_of_tom_sawer.count("H")
@@ -50,9 +53,11 @@ print(count_2)
 total_count = adwentures_of_tom_sawer.count("h") + adwentures_of_tom_sawer.count("H")
 print(total_count)
 
-# task 05
+# task 05 # DONE
 """ Виведіть, скільки слів у тексті починається з Великої літери?
 """
+print ("TASK 05")
+
 #count = adwentures_of_tom_sawer.count{uper()}
 #print(count)
 #count = adwentures_of_tom_sawer.upper().count
@@ -63,21 +68,19 @@ print(total_count)
 #search_upper_case = adwentures_of_tom_sawer
 #index = adwentures_of_tom_sawer.find(letter.isupper())
 #print(adwentures_of_tom_sawer[index:])
+
 show_letter_upper_case = [letter for letter in adwentures_of_tom_sawer if letter.isupper()]
 print(f'show_letter_upper_case = {show_letter_upper_case}')
 count_letter_upper_case_1 = len(show_letter_upper_case)
 print(count_letter_upper_case_1)
 
-#count_letter_upper_case = sum(1 for letter in adwentures_of_tom_sawer if letter.isupper()) - цю ідею подав gbt :(
-#print(count_letter_upper_case)
-
-# task 06
+# task 06 # DONE
 """ Виведіть позицію, на якій слово Tom зустрічається вдруге
 """
+print ("TASK 06")
+
 search_phrase_1 = "Tom"
 index_1 = adwentures_of_tom_sawer.find(search_phrase_1)
-#index_2 = adwentures_of_tom_sawer.find(search_phrase_1, index_1 + 1)
-#print(adwentures_of_tom_sawer[index_2:])
 
 if index_1 != -1:
    index_2 = adwentures_of_tom_sawer.find(search_phrase_1, index_1 + 1)
@@ -88,21 +91,31 @@ else:
 
 
 
-# task 07
+# task 07 # DONE
 """ Розділіть змінну adwentures_of_tom_sawer по кінцю речення.
 Збережіть результат у змінній adwentures_of_tom_sawer_sentences
 """
-adwentures_of_tom_sawer_sentences = None
+print ("TASK 07")
 
-# task 08
+import re
+adwentures_of_tom_sawer_sentences = re.split(r'[.!?]\s*', adwentures_of_tom_sawer)
+print(adwentures_of_tom_sawer_sentences)
+
+# task 08 # DONE
 """ Виведіть четверте речення з adwentures_of_tom_sawer_sentences.
 Перетворіть рядок у нижній регістр.
 """
+print ("TASK 08")
 
+sentence_4 = adwentures_of_tom_sawer_sentences[3]
+lowercase = sentence_4.lower()
+print(lowercase)
 
-# task 09 #Done
+# task 09 # DONE
 """ Перевірте чи починається якесь речення з "By the time".
 """
+print ("TASK 09")
+
 search_phrase = "By the time"
 index = adwentures_of_tom_sawer.find(search_phrase)
 if index != -1:
@@ -110,14 +123,14 @@ if index != -1:
 else:
     print('False')
 
-# task 10 - ДОРОБИТИ
+# task 10 # DONE
 """ Виведіть кількість слів останнього речення з adwentures_of_tom_sawer_sentences.
 """
-row = ('And when the middle of the afternoon came, from being a poor poverty, stricken boy in the morning, '
-       'Tom was literally rolling in wealth.')
-print(f'Count words = {len(row.split())}')
+print ("TASK 10")
 
-# OR
+#row = ('And when the middle of the afternoon came, from being a poor poverty, stricken boy in the morning, '
+#       'Tom was literally rolling in wealth.')
+#print(f'Count words = {len(row.split())}')
 
-last_sentence = adwentures_of_tom_sawer.split('.')[-1]
-print(last_sentence)
+last_sentence = adwentures_of_tom_sawer_sentences[4]
+print(f'Count words = {len(last_sentence.split())}')
