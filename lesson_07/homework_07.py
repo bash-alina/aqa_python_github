@@ -95,11 +95,23 @@ print(find_substring(str1, str2)) # поверне -1
 #
 #print(sum_of_even_numbers)
 
+# def sum_of_even_numbers(list_of_numbers):
+#    sum_of_even_numbers = 0
+#    for number in list_of_numbers:
+#        if number % 2 == 0:
+#            sum_of_even_numbers = sum_of_even_numbers + number
+#    return sum_of_even_numbers
+
 def sum_of_even_numbers(list_of_numbers):
     sum_of_even_numbers = 0
-    for number in list_of_numbers:
-        if number % 2 == 0:
-            sum_of_even_numbers = sum_of_even_numbers + number
+    for n in list_of_numbers:
+        try:
+            number = int(n)
+            if number % 2 == 0:
+                sum_of_even_numbers = sum_of_even_numbers + number
+        except ValueError:
+            return "Error: list has incorrect symbols"
+
     return sum_of_even_numbers
 
 list_of_numbers_1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 20, 25, 199, 1212]
