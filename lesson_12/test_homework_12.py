@@ -93,7 +93,3 @@ def test_calculation_list_with_float(): # 12. negative test: Перевірит�
 
 
 
-
-
-
-
