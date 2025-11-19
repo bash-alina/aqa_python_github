@@ -91,5 +91,11 @@ def test_calculation_list_with_float(): # 12. negative test: Перевірит�
 
 
 
-
+# @pytest.mark.parametrize('list_of_numbers, expected_result', [
+#     ([-1, -2, -3, -4, -5, -6, -7, -8, -9, -10, -20, -25, -199, -1212], -1262),
+#     ([-1, 2, -3, -4, -5, -6, -7, -8, -9, 10, -20, -25, -199, -1212], 1238)
+# ])
+# def test_calculation_of_negative_numbers(list_of_numbers, expected_result): # 3. negative test: Перевірити, що система поврене значення для негативних чисел
+#     actual_result = sum_of_even_numbers(list_of_numbers)
+#     assert expected_result == actual_result
 
